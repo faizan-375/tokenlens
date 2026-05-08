@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokenLens — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #d0d0e0;
+      line-height: 1.7;
+      padding: 40px 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f0f0ff;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #b0b0c8;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    strong {
+      color: #e0e0f8;
+    }
+    code {
+      background: rgba(124,140,248,0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: #7c8cf8;
+    }
+    .highlight {
+      background: rgba(74, 222, 128, 0.08);
+      border-left: 3px solid #4ade80;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+    .highlight p {
+      margin-bottom: 0;
+      color: #4ade80;
+      font-weight: 600;
+    }
+    .footer-note {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 12px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TokenLens — Privacy Policy</h1>
+  <div class="updated">Last updated: May 8, 2026</div>
+
+  <div class="highlight">
+    <p>TokenLens collects zero data. Everything runs locally in your browser.</p>
+  </div>
+
+  <h2>What TokenLens Does</h2>
+  <p>TokenLens is a Chrome extension that counts tokens in real-time on AI chat platforms (ChatGPT, Claude, and Gemini). It helps you track how much of the AI model's context window you've used.</p>
+
+  <h2>Data Collection</h2>
+  <p><strong>We collect absolutely no data.</strong> Specifically:</p>
+  <ul>
+    <li>No personal information is collected</li>
+    <li>No conversation content is stored, transmitted, or logged</li>
+    <li>No analytics or tracking scripts are used</li>
+    <li>No cookies are set</li>
+    <li>No network requests are made by the extension — enforced via <code>connect-src 'none'</code> in the Content Security Policy</li>
+  </ul>
+
+  <h2>How Token Counting Works</h2>
+  <p>All token counting happens <strong>100% locally</strong> in your browser using a JavaScript-based tokenizer. The extension reads the visible text on the page to count tokens. This text is:</p>
+  <ul>
+    <li>Processed entirely in-memory within your browser tab</li>
+    <li>Never sent to any server, API, or third party</li>
+    <li>Never stored permanently — only held in memory while the tab is open</li>
+  </ul>
+
+  <h2>Local Storage</h2>
+  <p>The extension uses <code>chrome.storage.local</code> to save only:</p>
+  <ul>
+    <li><strong>Widget position</strong> (x/y coordinates) — so the floating widget stays where you put it</li>
+    <li><strong>Overlay toggle state</strong> — whether the widget is visible or hidden</li>
+    <li><strong>Minimized state</strong> — whether the widget is expanded or collapsed</li>
+  </ul>
+  <p>All per-tab token data is automatically deleted when the tab is closed.</p>
+
+  <h2>Permissions</h2>
+  <p>TokenLens requests only two Chrome permissions:</p>
+  <ul>
+    <li><code>activeTab</code> — To read text on the current AI platform tab for token counting</li>
+    <li><code>storage</code> — To save widget position and display preferences locally</li>
+  </ul>
+  <p>No other permissions are requested. Specifically, there is no <code>scripting</code>, <code>tabs</code>, <code>history</code>, or <code>webRequest</code> permission.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>TokenLens uses <strong>zero third-party services</strong>. There are no external scripts, no CDNs, no remote resources of any kind loaded by the extension.</p>
+
+  <h2>Open Source</h2>
+  <p>The extension's source code is fully inspectable. You can verify every claim in this privacy policy by reading the code yourself.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this privacy policy is updated, the changes will be reflected in a new version of the extension. The "Last updated" date at the top will be changed accordingly.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this privacy policy or the extension, please open an issue on the project's repository or contact the developer directly.</p>
+
+  <div class="footer-note">
+    TokenLens v1.1.0 · 100% local · Zero data collection
+  </div>
+
+</body>
+</html>
